@@ -55,10 +55,13 @@
     "cz-git": "^1.14.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
     "eslint-plugin-storybook": "^10.5.10",
     "jest": "^30.5.0",
     "jest-environment-jsdom": "^30.5.0",
+    "lint-staged": "^17.4.1",
     "playwright": "latest",
+    "prettier": "^3.9.6",
     "storybook": "^10.5.10",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
@@ -69,5 +72,15 @@
     "commitizen": {
       "path": "cz-git"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "jest --bail --passWithNoTests --findRelatedTests"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
