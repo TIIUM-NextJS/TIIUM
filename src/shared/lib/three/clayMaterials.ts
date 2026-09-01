@@ -49,10 +49,10 @@ export function createEdgeFadeClayMaterial(
       `,
     );
     shader.vertexShader = shader.vertexShader.replace(
-      "#include <worldpos_vertex>",
+      "#include <begin_vertex>",
       `
-      #include <worldpos_vertex>
-      vWorldPosition = worldPosition.xyz;
+      #include <begin_vertex>
+      vWorldPosition = (modelMatrix * vec4(transformed, 1.0)).xyz;
       `,
     );
     shader.fragmentShader = shader.fragmentShader.replace(
