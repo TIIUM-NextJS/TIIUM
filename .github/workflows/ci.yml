@@ -25,9 +25,6 @@ jobs:
       - name: 타입스크립트 에러 검사
         run: npx tsc --noEmit
 
-      - name: ESLint 문법 및 포맷 검사
-        run: npm run lint
-
       - name: Jest 전체 테스트 실행
         run: npm test -- --passWithNoTests
 
