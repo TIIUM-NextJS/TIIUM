@@ -27,7 +27,7 @@ const config: UserConfig = {
     useEmoji: true,
     emojiAlign: "left",
     alias: { fd: "docs: fix typos" },
-    skipQuestions: ["scope"],
+    skipQuestions: ["scope", "breaking"],
     messages: {
       type: "커밋할 변경 사항의 타입을 선택하세요:",
       subject: "변경 사항을 간단히 설명해주세요:\n",
