@@ -25,7 +25,7 @@ const config: UserConfig = {
   },
   prompt: {
     useEmoji: true,
-    emojiAlign: "center",
+    emojiAlign: "left",
     alias: { fd: "docs: fix typos" },
     skipQuestions: ["scope"],
     messages: {
