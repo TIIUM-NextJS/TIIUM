@@ -1,4 +1,5 @@
 import { OrbitControls } from "@react-three/drei";
+
 import { FIXED_POLAR_ANGLE } from "../model/constants";
 
 export function SceneEnvironment() {

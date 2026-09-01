@@ -1,10 +1,11 @@
+import { useGLTF } from "@react-three/drei";
+import { useEffect } from "react";
+
 import {
   applyEdgeFadeClayMaterial,
   CLAY_COLORS,
 } from "@/src/shared/lib/three/clayMaterials";
 import { RotatingGroup } from "@/src/shared/lib/three/RotatingGroup";
-import { useGLTF } from "@react-three/drei";
-import { useEffect } from "react";
 
 export function MoundModel() {
   const model = useGLTF("/models/mound.glb");
