@@ -1,4 +1,4 @@
-import { Header } from "@/src/widgets/header/ui/Header";
+import { Navigation } from "@/src/widgets/navigation/ui/Navigation";
 export const dynamic = "force-dynamic";
 
 export default async function WithHeaderLayout({
@@ -8,7 +8,7 @@ export default async function WithHeaderLayout({
 }>) {
   return (
     <div>
-      <Header />
+      <Navigation />
       {children}
     </div>
   );
