@@ -14,6 +14,8 @@ body {
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
+  --color-sidebar-overlay: var(--sidebar-overlay);
+  --color-sidebar-muted-foreground: var(--sidebar-muted-foreground);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -79,14 +81,17 @@ body {
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar: oklch(0.903 0.021 81.8); /* #e6ded0 - 샌드 베이지 패널 */
+  --sidebar-foreground: oklch(0.301 0.033 56.3); /* #3b2a1e */
+  --sidebar-muted-foreground: oklch(0.523 0.044 60.3); /* #7d6450 */
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-accent: oklch(0.864 0.027 82.4); /* #dbd1bf - hover */
+  --sidebar-accent-foreground: oklch(0.301 0.033 56.3);
+  --sidebar-border: oklch(0.836 0.03 82.6); /* #d3c8b4 */
   --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-overlay: oklch(0.301 0.033 56.3 / 35%);
+  --sidebar-shadow: oklch(0.301 0.033 56.3 / 18%);
 }
 
 .dark {
@@ -121,6 +126,9 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-muted-foreground: oklch(0.708 0 0);
+  --sidebar-overlay: oklch(0 0 0 / 50%);
+  --sidebar-shadow: oklch(0 0 0 / 30%);
 }
 
 @layer base {
