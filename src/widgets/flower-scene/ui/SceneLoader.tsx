@@ -1,4 +1,5 @@
 import { Html } from "@react-three/drei";
+
 import { Spinner } from "@/src/shared/ui/spinner";
 
 export function SceneLoader() {

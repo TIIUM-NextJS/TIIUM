@@ -1,7 +1,9 @@
-import { FlowerModel } from "@/src/entities/flower/ui/FlowerModel";
-import { MoundModel } from "@/src/entities/mound/ui/MoundModel";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
+
+import { FlowerModel } from "@/src/entities/flower/ui/FlowerModel";
+import { MoundModel } from "@/src/entities/mound/ui/MoundModel";
+
 import { CAMERA_POSITION } from "../model/constants";
 import { SceneEnvironment } from "./SceneEnvironment";
 import { SceneHtml } from "./SceneHtml";

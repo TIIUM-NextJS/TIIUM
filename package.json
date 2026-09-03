@@ -9,7 +9,9 @@
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest"
+    "test": "jest",
+    "commit": "cz",
+    "prepare": "husky"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -34,6 +36,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "latest",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
     "@storybook/addon-a11y": "^10.5.10",
     "@storybook/addon-docs": "^10.5.10",
     "@storybook/addon-onboarding": "^10.5.10",
@@ -47,16 +51,36 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.185.4",
+    "commitizen": "^4.3.2",
+    "cz-git": "^1.14.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
     "eslint-plugin-storybook": "^10.5.10",
     "jest": "^30.5.0",
     "jest-environment-jsdom": "^30.5.0",
+    "lint-staged": "^17.4.1",
     "playwright": "latest",
+    "prettier": "^3.9.6",
     "storybook": "^10.5.10",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
     "typescript": "^5",
     "vite": "latest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "jest --bail --passWithNoTests --findRelatedTests"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
