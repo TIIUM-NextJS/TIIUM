@@ -1,3 +1,3 @@
 export function MenuButton() {
-  return <button>MENU</button>;
+  return <button className="cursor-pointer">MENU</button>;
 }
